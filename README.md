@@ -22,10 +22,13 @@ Script that needs to be executed first.
 Script that I used for main user study (for SMC23).   
 
 
-## Private Repositories   
+---------------------
+
+## Required sources
+
+### Private Repositories   
 - [eth_teleman_franka](https://github.com/yaesolKim/eth_teleman_franka)   
 - [franka_ros](https://github.com/yaesolKim/franka_ros)    
 
-
-## Public Repositories   
+### Public Repositories   
 - [dynamic_reconfigure](https://github.com/ros/dynamic_reconfigure)   
