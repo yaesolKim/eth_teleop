@@ -4,15 +4,16 @@ Scripts to run the Encountered-type Haptic Teleoperation system.
 ## How to Run   
 1. Launch ros server: `./start_server.zsh`   
 2. To use HEX10 FT sensor: `chmod *777 /dev/ttyACM*`   
-3. Run script for launch everything: `./h_vic.zsh`    
-
+3. Run script for launch everything: `./run.zsh`    
+4. Select the control method after 3   
+5. 
 ---------------------
 
 ## About each scripts
 1. define_Ks.zsh   
 I used to collect the data for defining the static K value (for SMC23).   
 
-2. h_vic.zsh    
+2. run.zsh    
 Core script to run the system.   
 
 3. start_server.zsh   

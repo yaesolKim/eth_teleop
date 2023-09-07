@@ -1,8 +1,8 @@
 #!/usr/bin/zsh
 
-echo "Start F/T sensor nodes!"
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && python ./src/wittenstein_hex10/Resense.py/src/HEX10.py & '
-sleep 2
+#echo "Start F/T sensor nodes!"
+#/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && python ./src/wittenstein_hex10/Resense.py/src/HEX10.py & '
+#sleep 2
 
 echo "Put the condition number (0, 1, 2, 3) :"
 
@@ -11,7 +11,7 @@ echo ETH and Teleoperation starts for $varname
 
 # condition 2 : with heuristic VIC, h_vic
 if (($varname == 2 )); then
-echo "Contion 2: ETH-teleoperation with algorithamic variable stiffness control!"
+echo "Contion 2: ETH-teleoperation with heuristic variable stiffness control!"
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=h_vic & '
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=h_vic & '
@@ -20,7 +20,7 @@ fi
 
 # condition 3 : with algorithmic VIC, a_vic
 if (($varname == 3 )); then
-echo "Contion 3: ETH-teleoperation with heuristic variable stiffness control!"
+echo "Contion 3: ETH-teleoperation with algorithamic variable stiffness control!"
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=a_vic & '
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=a_vic & '
