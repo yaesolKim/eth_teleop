@@ -1,3 +1,4 @@
+#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 git_tocken
 #!/usr/bin/zsh
 
 pid=$(sudo lsof -n -i :9090 | grep LISTEN)
