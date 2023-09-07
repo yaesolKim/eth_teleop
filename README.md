@@ -9,8 +9,8 @@ ROS package of encountered-type haptic teleoperation.
 ---------------------
 
 ## Private Repositories   
-- [eth_teleman_franka](https://github.com/frankaemika/libfranka)   
-- [franka_ros](https://github.com/frankaemika/franka_ros)    
+- [eth_teleman_franka](https://github.com/yaesolKim/eth_teleman_franka)   
+- [franka_ros](https://github.com/yaesolKim/franka_ros)    
 
 
 ## Public Repositories   
