@@ -1,2 +1,0 @@
-PoseStamped pose
-WrenchStamped wrench
