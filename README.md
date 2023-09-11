@@ -2,11 +2,18 @@
 Scripts to run the Encountered-type Haptic Teleoperation system.   
 
 ## How to Run   
+
+### Terminal 1
 1. Launch ros server: `./start_server.zsh`   
-2. To use HEX10 FT sensor: `chmod *777 /dev/ttyACM*`   
-3. Run script for launch everything: `./run.zsh`    
-4. Select the control method after 3   
-5. 
+
+### Terminal 2
+1. To use HEX10 FT sensor: `chmod *777 /dev/ttyACM*`   
+2. Run script for launch everything: `./run.zsh`    
+3. Select the control method: (1) for h_vic, (2) for a_vic.     
+
+### Terminal 3   
+1. run test condition script: `rosrun eth_teleman test_condition.py`   
+2. Select the control method: (0) for move to initial pose, (1) for using static low K, (2) for using static high K, (3) for a_vic.    
 ---------------------
 
 ## About each scripts
