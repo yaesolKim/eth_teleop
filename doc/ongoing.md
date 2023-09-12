@@ -21,11 +21,7 @@
 
 ----
 
-### Tele-manipulation with real robot  
+* need force init process...    
+  measure the force after move to the initialized pose, and subtract this value to the realtime measured force.
 
-1. `roslaunch eth tele_robot.launch robot_ip:=192.168.88.9 load_gripper:=false`   
-2. `rosrun eth haptic`
-
-### Tele-manipulation simulation with gazebo
-
-1. `roslaunch eth tele_sim.launch y:=2.0 controller:=cartesian_impedance_example_controller rviz:=true gazebo:=false`
+----
