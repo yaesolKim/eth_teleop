@@ -17,7 +17,7 @@
 -----------------------------------------------------------------------------------  
 
 1. record low statik K for 10 times  
-T2 -> (2)  
+T2 -> (1)  
 T3 -> (0) -> (1) 10 times  
  
 2. record high statik K for 10 times  
@@ -25,9 +25,9 @@ T2 -> (2)
 T3 -> (0) -> (2) 10 times  
 
 3. record heuristic K for 10 times  
-T2 -> (1)  
-T3 -> (0) -> (0) 10 times  
+T2 -> (3)  
+T3 -> (0) -> (3) 10 times  
 
 4. record algorithmic K for 10 times  
-T2 -> (2)  
-T3 -> (0) -> (3) 10 times  
+T2 -> (4)  
+T3 -> (0) -> (4) 10 times  
