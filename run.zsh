@@ -18,7 +18,7 @@ sleep 5
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_a_vic.py & '
 sleep 2
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O low_static /data_P & '
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O low_static_K /data_P & '
 sleep 2
 fi
 
@@ -31,7 +31,7 @@ sleep 5
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_a_vic.py & '
 sleep 2
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O high_static /data_P & '
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O high_static_K /data_P & '
 sleep 2
 fi
 
@@ -39,26 +39,34 @@ fi
 # condition 3 : with heuristic VIC, h_vic
 if (($varname == 3 )); then
 echo "Contion 3: ETH-teleoperation with heuristic variable stiffness control!"
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=h_vic & '
-sleep 5
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=h_vic & '
-sleep 5
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_h_vic.py & '
-sleep 2
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O h_vic /data_P & '
-sleep 2
-fi
-
-# condition 4 : with algorithmic VIC, a_vic
-if (($varname == 4 )); then
-echo "Contion 4: ETH-teleoperation with algorithamic variable stiffness control!"
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=a_vic & '
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=a_vic & '
 sleep 5
 /bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_a_vic.py & '
 sleep 2
-/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O a_vic /data_P & '
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O heuristic_K /data_P & '
+sleep 2
+#/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=h_vic & '
+#sleep 5
+#/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=h_vic & '
+#sleep 5
+#/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_h_vic.py & '
+#sleep 2
+#/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O heuristic_K /data_P & '
+#sleep 2
+fi
+
+# condition 4 : with algorithmic VIC, a_vic
+if (($varname == 4 )); then
+echo "Contion 4: ETH-teleoperation with algorithmic variable stiffness control!"
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_eth.launch robot_ip:=10.240.14.24 control:=a_vic & '
+sleep 5
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && roslaunch eth_teleman robot_rem.launch robot_ip:=10.240.14.25 control:=a_vic & '
+sleep 5
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun eth_teleman record_a_vic.py & '
+sleep 2
+/bin/zsh -ec 'cd /home/vicarios/PycharmProjects/eth_teleop && source devel/setup.zsh && rosrun rosbag record -O algorithmic_K /data_P & '
 sleep 2
 fi
 
